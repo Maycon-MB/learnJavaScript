@@ -55,7 +55,46 @@ console.log(inversoValor2);
 // true
 
 // ** Object **
-/* Um objeto em JavaScript é uma estrutura de dados composta por pares chave-valor, 
-onde as chaves são chamadas de propriedades e os valores podem ser de qualquer tipo de dado.
-Eles são usados para armazenar e organizar informações relacionadas em uma única unidade, 
-sendo dinâmicos e permitindo a adição, modificação e remoção de propriedades durante a execução do programa. */
+/* Os objetos em JavaScript são coleções de pares de chave-valor, onde as chaves são strings (ou símbolos)
+ e os valores podem ser de qualquer tipo de dado, incluindo outros objetos.  */
+
+const documentoIdentidade = {
+  nome: "Maycon",
+  sobrenome: "Bruno",
+  cpf: "123.456.789-00",
+  empresa: "SMRE",
+  Idade: 24,
+};
+
+console.log(documentoIdentidade);
+
+// ** Array **
+/* Os arrays em JavaScript são objetos especiais que armazenam uma coleção de elementos, 
+onde cada elemento pode ser de qualquer tipo de dado, incluindo outros arrays e objetos. */
+
+const investimentoMensal = [1000, 2000, 3000, 2000, 1500, 1200, 1300];
+
+//console.log(investimentoMensal);
+console.log(`O valor investido no mês de janeiro é: ${investimentoMensal[0]}`);
+console.log(
+  `O valor investido no mês de fevereiro é: ${investimentoMensal[1]}`
+);
+
+// ** Nomenclatura e Mutabilidade **
+
+let musica = {
+  nome: "Let it Be",
+  artista: "Beatles",
+  album: "Let it Be",
+};
+
+let listaDeBandas = ["Beatles", "Rolling Stones", "Led Zeppelin"];
+
+console.log(listaDeBandas[3]);
+
+listaDeBandas[4] = "Linkin Park";
+console.log(listaDeBandas[4]);
+
+musica.album = "Past Masters";
+musica.ano = 1969;
+console.log(musica);
