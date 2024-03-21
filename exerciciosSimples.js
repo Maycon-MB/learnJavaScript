@@ -1,5 +1,11 @@
 // ** Exercícios **
 
+/* 
+    - O nome de cada variável criada deve respeitar as regras de nomenclatura de variáveis.
+    - Se uma variável não tiver seu valor alterado depois da inicialização, ela deve ser do tipo const.
+    - Comece cada resolução imprimindo na tela o texto "Resultado do exercicio X", sendo X o número do exercício em questão.
+*/
+
 // 1 - Escreva um programa executando os seguintes passos:
 console.log("Resultado do exercício 1");
 
