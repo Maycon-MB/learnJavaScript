@@ -135,3 +135,57 @@ let casa = {
 };
 
 casa.calcularTamanho();
+
+const listaNotas = [
+  { nome: "Maycon", nota: 20 },
+  { nome: "Pedro", nota: 15 },
+  { nome: "Lucas", nota: 12 },
+  { nome: "Fabricio", nota: 16 },
+  { nome: "Isabelle", nota: 18 },
+  { nome: "Nathalia", nota: 20 },
+  { nome: "Amanda", nota: 20 },
+  { nome: "João", nota: 20 },
+  { nome: "Marcus", nota: 12 },
+  { nome: "Sergio", nota: 13 },
+  { nome: "Diego", nota: 14 },
+  { nome: "Renan", nota: 11 },
+  { nome: "Rodrigo", nota: 19 },
+  { nome: "Messi", nota: 0 },
+  { nome: "CR7", nota: 0 },
+];
+
+//  Filter -  Método responsável por gerar um novo array resultado de um filtro estabelecido pelo programador
+const alunosAprovados = listaNotas.filter(function (aluno) {
+  return aluno.nota >= 12;
+});
+
+console.log(alunosAprovados);
+
+//  Find
+
+const alunosComZero = listaNotas.find(function (aluno) {
+  return aluno.nota === 0;
+});
+
+console.log(alunosComZero);
+
+//  Map
+
+const listaNomes = alunosAprovados.map(function (aluno) {
+  return aluno.nome;
+});
+
+console.log(listaNomes);
+
+function calculateSquareRoot(radicand) {
+  return radicand ** (1 / 2);
+}
+
+function calculatePythagoras(side1, side2) {
+  const sum = side1 ** 2 + side2 ** 2;
+  return calculateSquareRoot(sum);
+}
+
+console.log(
+  `A hipotenusa de um triângulo de lados 3 e 4 é: ${calculatePythagoras(3, 4)}`
+);

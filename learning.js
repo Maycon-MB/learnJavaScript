@@ -55,8 +55,10 @@ console.log(inversoValor2);
 // true
 
 // ** Object **
-/* Os objetos em JavaScript são coleções de pares de chave-valor, onde as chaves são strings (ou símbolos)
- e os valores podem ser de qualquer tipo de dado, incluindo outros objetos.  */
+/* 
+Os objetos em JavaScript são coleções de pares de chave-valor, onde as chaves são strings (ou símbolos)
+e os valores podem ser de qualquer tipo de dado, incluindo outros objetos.
+*/
 
 const documentoIdentidade = {
   nome: "Maycon",
@@ -69,8 +71,10 @@ const documentoIdentidade = {
 console.log(documentoIdentidade);
 
 // ** Array **
-/* Os arrays em JavaScript são objetos especiais que armazenam uma coleção de elementos, 
-onde cada elemento pode ser de qualquer tipo de dado, incluindo outros arrays e objetos. */
+/* 
+Os arrays em JavaScript são objetos especiais que armazenam uma coleção de elementos, 
+onde cada elemento pode ser de qualquer tipo de dado, incluindo outros arrays e objetos. 
+*/
 
 const investimentoMensal = [1000, 2000, 3000, 2000, 1500, 1200, 1300];
 
@@ -191,3 +195,57 @@ let casa = {
 };
 
 casa.calcularTamanho();
+
+const listaNotas = [
+  { nome: "Maycon", nota: 20 },
+  { nome: "Pedro", nota: 15 },
+  { nome: "Lucas", nota: 12 },
+  { nome: "Fabricio", nota: 16 },
+  { nome: "Isabelle", nota: 18 },
+  { nome: "Nathalia", nota: 20 },
+  { nome: "Amanda", nota: 20 },
+  { nome: "João", nota: 20 },
+  { nome: "Marcus", nota: 12 },
+  { nome: "Sergio", nota: 13 },
+  { nome: "Diego", nota: 14 },
+  { nome: "Renan", nota: 11 },
+  { nome: "Rodrigo", nota: 19 },
+  { nome: "Messi", nota: 0 },
+  { nome: "CR7", nota: 0 },
+];
+
+//  Filter -  Método responsável por gerar um novo array resultado de um filtro estabelecido pelo programador
+const alunosAprovados = listaNotas.filter(function (aluno) {
+  return aluno.nota >= 12;
+});
+
+console.log(alunosAprovados);
+
+//  Find
+
+const alunosComZero = listaNotas.find(function (aluno) {
+  return aluno.nota === 0;
+});
+
+console.log(alunosComZero);
+
+//  Map
+
+const listaNomes = alunosAprovados.map(function (aluno) {
+  return aluno.nome;
+});
+
+console.log(listaNomes);
+
+function calculateSquareRoot(radicand) {
+  return radicand ** (1 / 2);
+}
+
+function calculatePythagoras(side1, side2) {
+  const sum = side1 ** 2 + side2 ** 2;
+  return calculateSquareRoot(sum);
+}
+
+console.log(
+  `A hipotenusa de um triângulo de lados 3 e 4 é: ${calculatePythagoras(3, 4)}`
+);
