@@ -1,3 +1,12 @@
+// ** Estruturas Condicionais e de Repetição
+const usuario = { nome: "Maycon", idade: 24, time: "Flamengo" };
+
+const boasVindas1 = "Bem-vindo, torcedor Rubro-Negro!";
+const boasVindas2 = "Bem-vindo, torcedor Tricolor!";
+const boasVindas3 = "Bem-vindo, torcedor Vascaíno!";
+const boasVindas4 = "Bem-vindo, torcedor Botafoguense!";
+const boasVindasGeral = "Seja bem-vindo, torcedor!";
+
 // * If e Else
 /* 
 if (usuario.time === "Flamengo") {
