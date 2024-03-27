@@ -258,6 +258,10 @@ const boasVindas2 = "Bem-vindo, torcedor Tricolor!";
 const boasVindas3 = "Bem-vindo, torcedor Vascaíno!";
 const boasVindas4 = "Bem-vindo, torcedor Botafoguense!";
 const boasVindasGeral = "Seja bem-vindo, torcedor!";
+const msgDeEscolha = "Clique no setor para qual deseja comprar seu ingresso!";
+const msgFinal = "Divirta-se no Maracanã!!!";
+
+let numeroRepeticoes = 0;
 
 // * If e Else
 /* 
@@ -274,39 +278,46 @@ if (usuario.time === "Flamengo") {
 }
 */
 
-// * Switch Case
-switch (usuario.time) {
-  case "Flamengo":
-    console.log(boasVindas1);
-    break;
-  case "Fluminense":
-    console.log(boasVindas2);
-    break;
-  case "Vasco":
-    console.log(boasVindas3);
-    break;
-  case "Botafogo":
-    console.log(boasVindas4);
-    break;
-  default:
-    console.log(boasVindasGeral);
-}
+// * Switch Case (com do while para exemplo)
+do {
+  switch (usuario.time) {
+    case "Flamengo":
+      console.log(boasVindas1);
+      break;
+    case "Fluminense":
+      console.log(boasVindas2);
+      break;
+    case "Vasco":
+      console.log(boasVindas3);
+      break;
+    case "Botafogo":
+      console.log(boasVindas4);
+      break;
+    default:
+      console.log(boasVindasGeral);
+
+      console.log(msgDeEscolha);
+      console.log(msgFinal);
+  }
+  numeroRepeticoes++;
+} while (numeroRepeticoes < 10);
 
 // * Operador Ternário
-/*
-usuario.time === "Flamengo"
-  ? console.log(boasVindas1)
-  : usuario.time === "Fluminense"
-  ? console.log(boasVindas2)
-  : usuario.time === "Vasco"
-  ? console.log(boasVindas3)
-  : usuario.time === "Botafogo"
-  ? console.log(boasVindas4)
-  : console.log(boasVindasGeral);
-*/
+// do {
+//   usuario.time === "Flamengo"
+//     ? console.log(boasVindas1)
+//     : usuario.time === "Fluminense"
+//     ? console.log(boasVindas2)
+//     : usuario.time === "Vasco"
+//     ? console.log(boasVindas3)
+//     : usuario.time === "Botafogo"
+//     ? console.log(boasVindas4)
+//     : console.log(boasVindasGeral);
 
-const msgDeEscolha = "Clique no setor para qual deseja comprar seu ingresso!";
-const msgFinal = "Divirta-se no Maracanã!!!";
+//   console.log(msgDeEscolha);
+//   console.log(msgFinal);
 
-console.log(msgDeEscolha);
-console.log(msgFinal);
+//   numeroRepeticoes++;
+// } while (numeroRepeticoes < 10);
+
+console.log("Ingressos Esgotados");
