@@ -4,7 +4,8 @@
 // Podem ser em aspas simples (''), aspas duplas ("") ou crase (``).
 // O formato com crase é uma "string template", ou seja, uma string que permite expressões embutidas entre si, por exemplo:
 
-const texto1 = "Uma string normal."; //Pode ser usado com aspas simples também
+//Pode ser usado com aspas simples também
+const texto1 = "Uma string normal.";
 
 const numeroExemplo = 102030;
 const stringTemplate = `O número que decidi registrar foi o ${numeroExemplo}`;
